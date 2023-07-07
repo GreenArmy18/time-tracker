@@ -77,7 +77,7 @@ function App() {
     >
       <div className="content-wrapper">
       <Container maxWidth="md" style={{ minHeight: '100vh', overflowY: 'auto' }}>
-      <Typography variant="h4" align="center" gutterBottom style={{ fontSize: '1.5rem' }} className="headline">
+      <Typography variant="h4" align="center" gutterBottom style={{ fontSize: '1.5rem' }}>
       <Box display="flex" justifyContent="center" alignItems="center">
         <Typography variant="h4" align="center" gutterBottom>
           <Box fontFamily="Assistant" fontWeight="bold">
