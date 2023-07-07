@@ -75,11 +75,16 @@ function App() {
       dir="rtl"
       textAlign="right"
     >
-      <Container maxWidth="md">
-      <Typography variant="h4" align="center" gutterBottom>
-        <Box fontFamily="Assistant" fontWeight="bold">
-          חישוב זמן כולל
-        </Box>
+      <div className="content-wrapper">
+      <Container maxWidth="md" style={{ minHeight: '100vh', overflowY: 'auto' }}>
+      <Typography variant="h4" align="center" gutterBottom style={{ fontSize: '1.5rem' }} className="headline">
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Typography variant="h4" align="center" gutterBottom>
+          <Box fontFamily="Assistant" fontWeight="bold">
+            חישוב זמן כולל
+          </Box>
+        </Typography>
+      </Box>
       </Typography>
 
         <Box mt={2} textAlign="center">
@@ -99,7 +104,7 @@ function App() {
           </TextField>
         </Box>
 
-        <TableContainer>
+        <TableContainer style={{ overflowX: 'auto' }}>
           <Table>
             <TableHead>
               <TableRow>
@@ -144,6 +149,7 @@ function App() {
           <Typography variant="h6">{result}</Typography>
         </Box>
       </Container>
+      </div>
     </Box>
   </ThemeProvider>
   );
