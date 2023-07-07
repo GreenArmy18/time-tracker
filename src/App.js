@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import { Box, Button, Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography, MenuItem } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Assistant',
+  },
+});
 
 function App() {
   const [times, setTimes] = useState([
@@ -59,6 +66,7 @@ function App() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <Box
       display="flex"
       justifyContent="center"
@@ -68,9 +76,11 @@ function App() {
       textAlign="right"
     >
       <Container maxWidth="md">
-        <Typography variant="h4" align="center" gutterBottom>
+      <Typography variant="h4" align="center" gutterBottom>
+        <Box fontFamily="Assistant" fontWeight="bold">
           חישוב זמן כולל
-        </Typography>
+        </Box>
+      </Typography>
 
         <Box mt={2} textAlign="center">
           <Typography variant="body1">בחרי מספר שעות לפני הכניסה הראשונה:</Typography>
@@ -135,6 +145,7 @@ function App() {
         </Box>
       </Container>
     </Box>
+  </ThemeProvider>
   );
 }
 
