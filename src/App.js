@@ -106,15 +106,15 @@ function App() {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>יום</TableCell>
-                <TableCell>זמן כניסה</TableCell>
-                <TableCell>זמן יציאה</TableCell>
+                <TableCell style={{ fontSize: '20px', textAlign: 'center' }}>יום</TableCell>
+                <TableCell style={{ fontSize: '20px', textAlign: 'center' }}>זמן כניסה</TableCell>
+                <TableCell style={{ fontSize: '20px', textAlign: 'center' }}>זמן יציאה</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {times.map(({ day, entry, exit }, index) => (
                 <TableRow key={index}>
-                  <TableCell>{day}</TableCell>
+                  <TableCell style={{ fontSize: '16px', textAlign: 'center' }}>{day}</TableCell>
                   <TableCell>
                     <TextField
                       type="time"
@@ -142,7 +142,6 @@ function App() {
             חשב זמן כולל
           </Button>
         </Box>
-
         <Box mt={2} textAlign="center">
           <Typography variant="h6">{result}</Typography>
         </Box>
